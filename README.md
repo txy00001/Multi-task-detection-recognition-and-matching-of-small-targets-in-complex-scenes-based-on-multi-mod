@@ -33,9 +33,9 @@ pip install --upgrade nvidia-tensorrt
 权重链接：
 链接：https://pan.baidu.com/s/1qtJynXuxwcC2fmK4HLMqgQ?pwd=inve 
 提取码：inve
-### trt构建
+ trt构建
 通过trt构建流程PDF可以进行paddle-ocr的trt推理，然后将trt推理框架加入主函数实现ocr的加速检测及识别，其中有对应的脚本文件及注意事项，方便小白使用
 
-### 结果
+结果
 可在目录下找到
 
