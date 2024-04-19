@@ -1,0 +1,72 @@
+device_info:  # 器件信息
+  template_name: relay  # 模板名称，用来根据网表信息对模板进行筛选过滤
+  device_type: relay  # 器件类型，对应用户选择的器件类型
+  shooting_type: global  # 拍摄方式（top, bottom, global），对应用户选择的拍摄方式
+  device_attach: none  # 附件，对应用户填写的附件说明
+detect_config:  # 检测配置
+  detect_region: [0, 0, 2160, 3840]  # 检测区域，xyxy 格式，对应客户选择检测区域
+  match_window_width: 360  # 当铭牌或引脚在图像中部区域时将引脚与引线匹配，图像中部区域，对应用户选择的匹配区域
+  mask_processes:
+    line_marker:
+      - dilate
+loc_position: top  # 位置标签相对位置 (top, left, center)，对应用户选择的位置标签模板
+nameplate_config:  # 器件铭牌配置
+  detect:  # 铭牌检测
+    model_path: models/relay/relay0118-640s.ptt  # 铭牌检测模型
+    nameplate_type: relay
+terminal_config:  # 器件引脚配置
+  infer: # 推断，器件铭牌与引脚匹配模式
+    "RXM24VDC":  # 器件铭牌（或丝印）
+      "attachment":  # 附件信息
+        "is_attachment": false  # 是否为附件
+        "attachment_location": none  # 附件与主件的相对位置 (left, on, right)
+        "body": [860, 1414, 1548, 1832]  # 器件（铭牌）区域（与检测模型训练时的框一致），对应器件引脚-推断-选择器件铭牌（可能去掉铭牌更准确一些）
+        "terminals":  # 引脚数据
+          "12":  # 引脚编号
+            "center": []  # 引脚中心点坐标
+            "angle": 90  # 极坐标系 90度
+          "22": 
+            "center": []
+            "angle": 90  # 极坐标系 90度
+          "32": 
+            "center": []
+            "angle": 90  # 极坐标系 90度
+          "42":  # 引脚编号
+            "center": []  # 引脚中心点坐标
+            "angle": 90  # 极坐标系 -90度
+          "44":  # 引脚编号
+            "center": []  # 引脚中心点坐标
+            "angle": 90  # 极坐标系 -90度
+          "14": 
+            "center": []
+            angle: -90  # 极坐标系 -90度
+          "13": 
+            "center": []
+            "angle": -90  # 极坐标系 -90度
+    "RXM120VAC":  # 器件铭牌（或丝印）
+      "attachment":  # 附件信息
+        "is_attachment": false  # 是否为附件
+        "attachment_location": none  # 附件与主件的相对位置 (left, on, right)
+        "body": [860, 1414, 1548, 1832]  # 器件（铭牌）区域（与检测模型训练时的框一致），对应器件引脚-推断-选择器件铭牌（可能去掉铭牌更准确一些）
+        "terminals":  # 引脚数据
+          "12":  # 引脚编号
+            "center": []  # 引脚中心点坐标
+            "angle": 90  # 极坐标系 90度
+          "22": 
+            "center": []
+            "angle": 90  # 极坐标系 90度
+          "32": 
+            "center": []
+            "angle": 90  # 极坐标系 90度
+          "42":  # 引脚编号
+            "center": []  # 引脚中心点坐标
+            "angle": 90  # 极坐标系 -90度
+          "44":  # 引脚编号
+            "center": []  # 引脚中心点坐标
+            "angle": 90  # 极坐标系 -90度
+          "14": 
+            "center": []
+            angle: -90  # 极坐标系 -90度
+          "13": 
+            "center": []
+            "angle": -90  # 极坐标系 -90度

@@ -1,0 +1,19 @@
+device_info:  # 器件信息
+  template_name: junction_box  # 模板名称，用来根据网表信息对模板进行筛选过滤
+  device_type: junction_box  # 器件类型，对应用户选择的器件类型
+  shooting_type: bottom  # 拍摄方式（top, bottom, global），对应用户选择的拍摄方式
+  device_attach: none  # 附件，对应用户填写的附件说明
+detect_config:  # 检测配置
+  detect_region: [0, 0, 2160, 3840]  # 检测区域，xyxy 格式，对应客户选择检测区域
+  match_window_width: 360  # 当铭牌或引脚在图像中部区域时将引脚与引线匹配，图像中部区域，对应用户选择的匹配区域
+  mask_processes:
+    line_marker:
+      - dilate
+loc_position: left  # 位置标签相对位置 (top, left, center)，对应用户选择的位置标签模板
+nameplate_config:  # 器件铭牌配置
+  detect: none  # none表示不检测
+terminal_config:  # 器件引脚配置
+  detect:  # 检测
+    model_path: models/juncion_box/junction_box0107-640s.pt  # 引脚检测模型，none表示推断
+    terminal_type: junction_box  # 引脚类型
+    angle: -90  # angle in [-180, 180]

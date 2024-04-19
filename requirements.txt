@@ -1,0 +1,9 @@
+addict
+loguru
+pyyaml
+redis
+pillow
+numpy
+scipy
+pandas
+lapx

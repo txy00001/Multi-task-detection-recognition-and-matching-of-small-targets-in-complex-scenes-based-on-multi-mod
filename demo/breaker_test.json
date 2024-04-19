@@ -1,0 +1,137 @@
+{
+    "1": {
+        "model_type": "iC65N C16A",
+        "loc_marker": "1",
+        "line_marker": [
+            "*",
+            "113N",
+            "410L"
+        ]
+    },
+    "3": {
+        "model_type": "iC65N C4A",
+        "loc_marker": "QF13QF",
+        "line_marker": [
+            "133+",
+            "134t",
+            "410L",
+            "110N",
+            "410N",
+            "110L"
+        ]
+    },
+    "2": {
+        "model_type": "iC65N C4A",
+        "loc_marker": "15",
+        "line_marker": [
+            "133-",
+            "130a",
+            "133+",
+            "134t",
+            "131a",
+            "110N",
+            "410N",
+            "124"
+        ]
+    },
+    "5": {
+        "model_type": "iC65N D10A",
+        "loc_marker": "QF18QF16QF18",
+        "line_marker": [
+            "130c",
+            "313a",
+            "130a",
+            "130b",
+            "131n",
+            "1310",
+            "131c",
+            "131a",
+            "130n",
+            "231a"
+        ]
+    },
+    "4": {
+        "model_type": "iC65N D6A",
+        "loc_marker": "19QF18",
+        "line_marker": [
+            "313a",
+            "313n",
+            "131n",
+            "418L",
+            "231a"
+        ]
+    },
+    "37": {
+        "model_type": "iC65N D10A",
+        "loc_marker": "QF19",
+        "line_marker": [
+            "311a",
+            "313n",
+            "131n",
+            "110N",
+            "110L",
+            "418L",
+            "418N",
+            "328"
+        ]
+    },
+    "54": {
+        "model_type": "IOF",
+        "loc_marker": "",
+        "line_marker": [
+            "311a",
+            "328"
+        ]
+    },
+    "55": {
+        "model_type": "IC65N D2A",
+        "loc_marker": "QF3",
+        "line_marker": [
+            "311c",
+            "3281",
+            "231b",
+            "3110",
+            "COIC",
+            "311a",
+            "231a"
+        ]
+    },
+    "67": {
+        "model_type": "IOF",
+        "loc_marker": "",
+        "line_marker": [
+            "3281"
+        ]
+    },
+    "69": {
+        "model_type": "IC85N D2A",
+        "loc_marker": "32",
+        "line_marker": [
+            "312a",
+            "3120",
+            "3282",
+            "314a",
+            "2310",
+            "231a"
+        ]
+    },
+    "83": {
+        "model_type": "IOF",
+        "loc_marker": "",
+        "line_marker": [
+            "314a",
+            "coia"
+        ]
+    },
+    "84": {
+        "model_type": "IC85N D2A",
+        "loc_marker": "F33",
+        "line_marker": [
+            "*",
+            "314C",
+            "coia",
+            "314a",
+            "314b"
+        ]
+    }
+}

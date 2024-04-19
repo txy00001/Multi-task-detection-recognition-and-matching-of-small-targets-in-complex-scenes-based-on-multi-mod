@@ -1,0 +1,99 @@
+device_info:  # 器件信息
+  template_name: breaker  # 模板名称，用来根据网表信息对模板进行筛选过滤
+  device_type: breaker  # 器件类型，对应用户选择的器件类型
+  shooting_type: global  # 拍摄方式（top, bottom, global），对应用户选择的拍摄方式
+  device_attach: none  # 附件，对应用户填写的附件说明
+detect_config:  # 检测配置
+  detect_region: [0, 0, 2160, 3840]  # 检测区域，xyxy 格式，对应客户选择检测区域
+  match_window_width: 1160  # 当铭牌或引脚在图像中部区域时将引脚与引线匹配，图像中部区域，对应用户选择的匹配区域
+  mask_processes:
+    line_marker:
+      - dilate
+loc_position: top  # 位置标签相对位置 (top, left, center)，对应用户选择的位置标签模板
+nameplate_config:  # 器件铭牌配置
+  detect:  # 铭牌检测
+    model_path: models/breaker/breaker0104-640s.pt  # 铭牌检测模型，none表示不检测
+    nameplate_type: breaker
+terminal_config:  # 器件引脚配置
+  infer: # 推断，器件铭牌与引脚匹配模式
+    "IC65NC10A":  # 器件铭牌（或丝印）
+      "attachment":  # 附件信息
+        "is_attachment": false  # 是否为附件
+        "attachment_location": none  # 附件与主件的相对位置 (left, on, right)
+      "body": [860, 1414, 1548, 1832]  # 器件（铭牌）区域（与检测模型训练时的框一致）x1y1x2y2，对应器件引脚-推断-选择器件铭牌（可能去掉铭牌更准确一些）
+      "terminals":  # 引脚数据
+        "1":  # 引脚编号
+          "center": [1060, 1254]  # 引脚中心点坐标 xy
+          "angle": 90  # 极坐标系 90度
+        "2":  # 引脚编号
+          "center": [1060, 2430]  # 引脚中心点坐标 xy
+          "angle": -90  # 极坐标系 -90度
+        "3":  # 引脚编号
+          "center": [1364, 1254]  # 引脚中心点坐标 xy
+          "angle": 90  # 极坐标系 90度
+        "4":  # 引脚编号
+          "center": [1364, 2430]  # 引脚中心点坐标 xy
+          "angle": -90  # 极坐标系 -90度
+    "IC65NC4A":
+      "attachment":  # 附件信息
+        "is_attachment": false
+        "attachment_location": none
+      "body": [860, 1414, 1548, 1832]
+      "terminals":
+        "1":
+          "center": [1060, 1254]
+          "angle": 90
+        "2":
+          "center": [1060, 2430]
+          "angle": -90
+        "3":
+          "center": [1364, 1254]
+          "angle": 90
+        "4":
+          "center": [1364, 2430]
+          "angle": -90
+    "IC65ND16A":
+      "attachment":
+        "is_attachment": false
+        "attachment_location": none
+      "body": [676, 1912, 1538, 2266]
+      "terminals":
+        "1":
+          "center": [850, 1753]
+          "angle": 90
+        "2":
+          "center": [850, 2779]
+          "angle": -90
+        "3":
+          "center": [1109, 1753]
+          "angle": 90
+        "4":
+          "center": [1109, 2779]
+          "angle": -90
+        "5":
+          "center": [1369, 1753]
+          "angle": 90
+        "6":
+          "center": [1369, 2779]
+          "angle": -90
+    "VIGIIC65ELM":
+      "attachment":
+        "is_attachment": true
+        "attachment_location": right
+      "body": [800, 2007, 1326, 2333]
+      "terminals":
+        "2":
+          "center": [940, 2804]
+          "angle": -90
+        "4":
+          "center": [1158, 2804]
+          "angle": -90
+    "IOF":
+      "attachment":
+        "is_attachment": true
+        "attachment_location": left
+      "body": [1094, 1223, 1272, 1692]
+      "terminals":
+        "11":
+          "center": [1131, 2252]
+          "angle": -90

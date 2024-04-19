@@ -1,0 +1,39 @@
+redis_stream:
+  host: 10.168.1.182
+  port: 6379
+  password: cast2024!
+  task_stream: taskMq_test
+  progress_stream: progressMq_test
+  state_stream: stateMq
+  consumer_group: ai_consumers
+  consumer_name: ai_consumer_1
+
+video_process:
+  input_dir: /workspace/Data/wiring_inspect/video-rp
+  output_dir: /workspace/Data/wiring_inspect/result-rp
+
+inspector_config:
+  ocr:
+    det_model_dir: models/ocr/ocr_impove/det
+    rec_model_dir: models/ocr/ocr_impove/rec
+  seg:
+    loc_marker: models/loc_marker/loc_marker0108-640s.pt
+    line_marker: models/line_marker/line_marker0115-640s.pt
+  track_config: cfg/botsort.yaml
+  device_repository: device_models
+  frame_sample_rate: 2
+  max_item_per_batch: 50
+  score_thresh: 0.8
+  track_count_thresh: 5
+  txt_count_thresh: 3
+  concat_cls_idx_name:
+    0: None
+    1: line_marker
+    2: loc_marker
+    3: junction_box
+    4: breaker
+    5: relay
+    6: motor_starter
+    7: plc
+
+log_dir: output

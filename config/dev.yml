@@ -1,0 +1,24 @@
+redis_stream:
+  host: 10.168.1.128
+  port: 6379
+  password: cast2024!
+  task_stream: taskMq
+  progress_stream: progressMq
+  state_stream: stateMq
+  consumer_group: ai_consumers
+  consumer_name: ai_consumer_1
+
+video_process:
+  input_dir: /mnt/P40_NFS/10_Projects/利德华福-北京/demo_project/process/video-rp/
+  output_dir: /mnt/P40_NFS/10_Projects/利德华福-北京/demo_project/process/result-rp/
+
+inspector_config:
+  ocr:
+    det_model_dir: models/ocr/24_0118/det
+    rec_model_dir: models/ocr/24_0118/rec
+  seg:
+    loc_marker: models/loc_marker/loc_marker0108-640s.pt
+    line_marker: models/line_marker/line_marker0115-640s.pt
+  device_repository: device_models
+  frame_sample_rate: 2
+  max_item_per_batch: 50
