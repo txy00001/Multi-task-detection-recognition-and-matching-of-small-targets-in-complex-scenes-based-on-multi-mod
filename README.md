@@ -29,7 +29,10 @@ pip install --upgrade nvidia-tensorrt
 (ppocr) dtong@QX-AI-10:~/miniconda3/envs/ppocr/lib/python3.8/site-packages/tensorrt_libs$ ln -s libnvinfer_builder_resource.so.8.6.1 libnvinfer_builder_resource.so
 ```
 更新了算法说明及测试结果，在对应的ocr文件夹里，可根据需求及目标进行选择
-
+```
+权重链接：
+链接：https://pan.baidu.com/s/1qtJynXuxwcC2fmK4HLMqgQ?pwd=inve 
+提取码：inve
 
 
 
