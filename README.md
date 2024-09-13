@@ -24,9 +24,9 @@ pip install --upgrade nvidia-tensorrt
 ```
 如果开启TensorRT报错，显示无法找到动态库，按照下面的方法设置软链接，让PaddleOCR找到动态库：
 ```
-(ppocr) dtong@QX-AI-10:~/miniconda3/envs/ppocr/lib/python3.8/site-packages/tensorrt_libs$ ln -s libnvinfer.so.8 libnvinfer.so
-(ppocr) dtong@QX-AI-10:~/miniconda3/envs/ppocr/lib/python3.8/site-packages/tensorrt_libs$ ln -s libnvinfer_plugin.so.8 libnvinfer_plugin.so
-(ppocr) dtong@QX-AI-10:~/miniconda3/envs/ppocr/lib/python3.8/site-packages/tensorrt_libs$ ln -s libnvinfer_builder_resource.so.8.6.1 libnvinfer_builder_resource.so
+(ppocr) xxx@QX-AI-10:~/miniconda3/envs/ppocr/lib/python3.8/site-packages/tensorrt_libs$ ln -s libnvinfer.so.8 libnvinfer.so
+(ppocr) xxx@QX-AI-10:~/miniconda3/envs/ppocr/lib/python3.8/site-packages/tensorrt_libs$ ln -s libnvinfer_plugin.so.8 libnvinfer_plugin.so
+(ppocr) xxx@QX-AI-10:~/miniconda3/envs/ppocr/lib/python3.8/site-packages/tensorrt_libs$ ln -s libnvinfer_builder_resource.so.8.6.1 libnvinfer_builder_resource.so
 ```
 更新了算法说明及测试结果，在对应的ocr文件夹里，可根据需求及目标进行选择
 ```
